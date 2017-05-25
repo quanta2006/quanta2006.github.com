@@ -3,25 +3,48 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Examples</title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <link href="css/index.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/grade.css" rel="stylesheet">
 </head>
 <body>
-    <div id="box">
-        <ul>
-            <li>实验1 <a href="ex01.html">ex01</a></li>
-            <li>实验2</li>
-            <li>实验3</li>
-            <li>实验4</li>
-            <li>bbb</li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-    </div>
+    <div class="g-box"></div>
+
+    <script src="js/jquery-3.2.0.min.js"></script>
+    <script src="js/jsrender.js"></script>
+    <script src="js/grade.js"></script>
 </body>
-    <script src="lib/jquery/jquery-3.2.0.js"></script>
-    <script src="js/index.js"></script>
 </html>
+
+
+<script id="gradeTmpl" type="text/x-jsrender">
+    <div class="m-row m-title">
+        <div class="m-id">学号</div>
+        <div class="m-name">姓名</div>
+        <div class="m-class">班级</div>
+        <div class="m-page">主页</div>
+        <div class="m-grade">点名1</div>
+        <div class="m-grade">点名2</div>
+        <div class="m-grade">实验3</div>
+        <div class="m-grade">实验4</div>
+        <div class="m-grade">实验6</div>
+        <div class="m-grade">实验5</div>
+        <div class="m-grade">实验7</div>
+        <div class="m-grade">实验9</div>
+    </div>   
+    {{for list}}
+    <div class="m-row">
+        <div class="m-id">{{:id}}</div>
+        <div class="m-name">{{:name}}</div>
+        <div class="m-class">{{:class}}</div>
+        <div class="m-page"><a href="{{:page}}">{{:page}}</a></div>
+        <div class="m-grade {{if call1 == 0}}m-red{{/if}}">{{:call1}}</div>
+        <div class="m-grade {{if call2 == 0}}m-red{{/if}}">{{:call2}}</div>
+        <div class="m-grade {{if work1 <= 60}}m-red{{/if}}">{{:work1}}</div>
+        <div class="m-grade {{if work2 <= 60}}m-red{{/if}}">{{:work2}}</div>
+        <div class="m-grade {{if work3 <= 60}}m-red{{/if}}">{{:work3}}</div>
+        <div class="m-grade {{if work4 <= 60}}m-red{{/if}}">{{:work4}}</div>
+        <div class="m-grade {{if work5 <= 60}}m-red{{/if}}">{{:work5}}</div>
+        <div class="m-grade {{if work6 <= 60}}m-red{{/if}}">{{:work6}}</div>
+    </div>   
+    {{/for}}
+</script>

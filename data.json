@@ -955,9 +955,9 @@
                   "page": "http://mercuryieafer.github.io",
                   "call1": "1",
                   "call2": "1",
-                  "work1": "60",
-                  "work2": "60",
-                  "work3": "60",
+                  "work1": "80",
+                  "work2": "80",
+                  "work3": "80",
                   "work4": "70",
                   "work5": "90",
                   "work6": "80"
@@ -1051,7 +1051,7 @@
                   "work3": "60",
                   "work4": "90",
                   "work5": "80",
-                  "work6": "60"
+                  "work6": "80"
             }
 
       ]

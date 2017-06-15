@@ -1,0 +1,32 @@
+.row {
+    display: flex;
+    flex-direction: column;
+    background: #666;
+    margin: 15px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.year {
+    background: #666;
+    padding: 5px 10px;
+    color: #fff;
+}
+
+.cnt {
+    background: #efefef;
+    padding: 5px 15px;
+}
+
+.img {
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    padding: 10px;
+    background: #fff
+}
+
+.img img{
+   width: 100px;
+   margin: 0 5px 5px 0
+}

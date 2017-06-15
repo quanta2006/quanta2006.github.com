@@ -1,6 +1,9 @@
+body {
+    margin: 0;
+    background: #c8c8c8;
+}
+
 .row {
-    display: flex;
-    flex-direction: column;
     background: #666;
     margin: 15px;
     padding: 10px;
@@ -21,12 +24,13 @@
 .img {
     display: flex;
     flex-direction: row;
-    height: 100px;
+    flex-wrap: wrap;
     padding: 10px;
     background: #fff
 }
 
-.img img{
-   width: 100px;
-   margin: 0 5px 5px 0
+.img img {
+    width: calc( ( 100% - 20px ) / 4);
+    margin: 0 5px 5px 0;
+    height: 100%;
 }
